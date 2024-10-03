@@ -993,5 +993,157 @@ let Words = {
             ],
             "example": []
         }
+    ],
+    "8": [
+        {
+            "english": "abundant",
+            "translate": "изобилующий",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The tree in my yard has an abundant amount of apples, so I made a huge pie."
+                }
+            ]
+        },
+        {
+            "english": "ambiguous",
+            "translate": "двусмысленный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The sign was ambiguous, making it hard to tell if we could park here or not."
+                }
+            ]
+        },
+        {
+            "english": "compelling",
+            "translate": "убедительный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "Her story about traveling the world was so compelling that everyone wanted to hear more."
+                }
+            ]
+        },
+        {
+            "english": "diligent",
+            "translate": "усердный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The diligent student studied every night and got the best grades in class."
+                }
+            ]
+        },
+        {
+            "english": "eloquent",
+            "translate": "красноречивый",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "He gave an eloquent speech that made everyone think deeply about the topic."
+                }
+            ]
+        },
+        {
+            "english": "erratic",
+            "translate": "нестабильный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "His erratic driving made everyone nervous during the road trip."
+                }
+            ]
+        },
+        {
+            "english": "excessive",
+            "translate": "чрезмерный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "There was excessive noise from the construction outside, making it hard to concentrate."
+                }
+            ]
+        },
+        {
+            "english": "feasible",
+            "translate": "осуществимый",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "It’s feasible to finish the project by Friday if we work together."
+                }
+            ]
+        },
+        {
+            "english": "impartial",
+            "translate": "беспристрастный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The referee was impartial, making fair calls during the game."
+                }
+            ]
+        },
+        {
+            "english": "inquisitive",
+            "translate": "любознательный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The inquisitive child asked many questions about how things work."
+                }
+            ]
+        },
+        {
+            "english": "irresistible",
+            "translate": "неотразимый",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The smell of fresh cookies was irresistible, and I couldn’t help but eat one."
+                }
+            ]
+        },
+        {
+            "english": "lethargic",
+            "translate": "вялый",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "After eating a big meal, I felt lethargic and just wanted to nap."
+                }
+            ]
+        },
+        {
+            "english": "meticulous",
+            "translate": "дотошный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "She was meticulous in her art project, paying attention to every little detail."
+                }
+            ]
+        },
+        {
+            "english": "resilient",
+            "translate": "устойчивый",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The resilient flower bloomed again after the storm, showing its strength."
+                }
+            ]
+        },
+        {
+            "english": "vibrant",
+            "translate": "яркий, энергичный",
+            "image": [],
+            "example": [
+                {
+                    "example_path": "The vibrant colors of the painting brightened up the entire room."
+                }
+            ]
+        }
     ]
 };
