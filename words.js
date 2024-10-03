@@ -998,7 +998,11 @@ let Words = {
         {
             "english": "abundant",
             "translate": "изобилующий",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://theschoolofchrist.org/wp-content/uploads/2019/03/brogden-the-abundant-life.jpg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "The tree in my yard has an abundant amount of apples, so I made a huge pie."
@@ -1008,7 +1012,11 @@ let Words = {
         {
             "english": "ambiguous",
             "translate": "двусмысленный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://miro.medium.com/v2/resize:fit:1000/1*33SMfVq-y8A_WmQ9hZmN3w.jpeg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "The sign was ambiguous, making it hard to tell if we could park here or not."
@@ -1018,7 +1026,11 @@ let Words = {
         {
             "english": "compelling",
             "translate": "убедительный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://www.counterpartcd.com/images/Blog_Illust_12Dec2023_thumbnail_Compelling.jpg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "Her story about traveling the world was so compelling that everyone wanted to hear more."
@@ -1028,7 +1040,11 @@ let Words = {
         {
             "english": "diligent",
             "translate": "усердный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://thumbs.dreamstime.com/b/vector-cartoon-diligent-office-worker-table-illustration-businessman-learns-to-work-laptop-flat-style-man-92294137.jpg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "The diligent student studied every night and got the best grades in class."
@@ -1038,7 +1054,11 @@ let Words = {
         {
             "english": "eloquent",
             "translate": "красноречивый",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://miro.medium.com/v2/resize:fit:700/1*rF4zXFzV1Jt3E-3v38awKw.jpeg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "He gave an eloquent speech that made everyone think deeply about the topic."
@@ -1048,7 +1068,11 @@ let Words = {
         {
             "english": "erratic",
             "translate": "нестабильный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://miro.medium.com/v2/resize:fit:700/1*rF4zXFzV1Jt3E-3v38awKw.jpeg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "His erratic driving made everyone nervous during the road trip."
@@ -1058,7 +1082,11 @@ let Words = {
         {
             "english": "excessive",
             "translate": "чрезмерный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://eparisextra.com/wp-content/uploads/2023/07/362224832_601478662175938_3108064439236641837_n-767x450.jpg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "There was excessive noise from the construction outside, making it hard to concentrate."
@@ -1068,7 +1096,11 @@ let Words = {
         {
             "english": "feasible",
             "translate": "осуществимый",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://blog.engram.us/content/images/size/w760h400/2023/06/feasible.png"
+                }
+            ],
             "example": [
                 {
                     "example_path": "It’s feasible to finish the project by Friday if we work together."
@@ -1078,7 +1110,11 @@ let Words = {
         {
             "english": "impartial",
             "translate": "беспристрастный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://info.umkc.edu/facultyomb/wp-content/uploads/2016/09/Scales.jpg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "The referee was impartial, making fair calls during the game."
@@ -1088,7 +1124,11 @@ let Words = {
         {
             "english": "inquisitive",
             "translate": "любознательный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://www.whizzpopbang.com/blog/wp-content/uploads/2022/09/shutterstock_1754848844.jpg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "The inquisitive child asked many questions about how things work."
@@ -1098,7 +1138,11 @@ let Words = {
         {
             "english": "irresistible",
             "translate": "неотразимый",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://beauty.givenchy.sa/cdn/shop/files/F10100128_Irresistible-EDP_Bottle-and-Ingredients_View-2_PDM.jpg?v=1715772268"
+                }
+            ],
             "example": [
                 {
                     "example_path": "The smell of fresh cookies was irresistible, and I couldn’t help but eat one."
@@ -1108,7 +1152,11 @@ let Words = {
         {
             "english": "lethargic",
             "translate": "вялый",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://media.post.rvohealth.io/wp-content/uploads/2020/08/4951_lethargy_1200x628-facebook-1200x628.jpg"
+                }
+            ],
             "example": [
                 {
                     "example_path": "After eating a big meal, I felt lethargic and just wanted to nap."
@@ -1118,7 +1166,11 @@ let Words = {
         {
             "english": "meticulous",
             "translate": "дотошный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://media.istockphoto.com/id/155446464/photo/perfectionist-garden-gardening-perfection-grass-scissors-humor.jpg?s=612x612&w=0&k=20&c=J6uz1Fu9pafF_6umQB0xgIMuvwj0HWViVtbxDXaPmdQ="
+                }
+            ],
             "example": [
                 {
                     "example_path": "She was meticulous in her art project, paying attention to every little detail."
@@ -1128,7 +1180,11 @@ let Words = {
         {
             "english": "resilient",
             "translate": "устойчивый",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://www.inspireone.in/wp-content/uploads/2021/03/resilient-leadership-1024x1024.png"
+                }
+            ],
             "example": [
                 {
                     "example_path": "The resilient flower bloomed again after the storm, showing its strength."
@@ -1138,7 +1194,11 @@ let Words = {
         {
             "english": "vibrant",
             "translate": "яркий, энергичный",
-            "image": [],
+            "image": [
+                {
+                    "image_path": "https://media.istockphoto.com/id/1305282522/photo/3d-render-abstract-background-with-colorful-spectrum-bright-pink-yellow-neon-rays-and-glowing.jpg?s=612x612&w=0&k=20&c=Xl0Ou3iYKojtEZG4bOwAstB-RYqn9UUzG6y1X36BVjs="
+                }
+            ],
             "example": [
                 {
                     "example_path": "The vibrant colors of the painting brightened up the entire room."
