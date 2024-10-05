@@ -42,43 +42,59 @@
 					<!--#выборстраницы-->
 					<button class="menu-button menu-left" onclick="ChangePage(0)">Генератор</button>
 					<button class="menu-button menu-right" onclick="ChangePage(1)">Слова</button>
+					<button class="menu-button menu-right" onclick="ChangePage(2)">Картинки</button>
 					
 					<!--#выборстраницы-->
 					<!--ВЫБОР-СТРАНИЦЫ-КОНЕЦ-->
 				</div>
 
+
+
 				<div class="main-menu row">
 
 
-					<button class="drop-options-button options" onclick="DropOptions()"><i class="fa-solid fa-gear options"></i></button>
-
-					<!-- drop-options-начало-->
-					<div class="drop-options options">
-					<!-- drop-options-начало-->
-
-						<label class="switch options">
-						  <input class="checkbox-reverse options" onchange="ReversMode()" type="checkbox">
-						  <!-- <input class="checkbox-reverse" onchange="ImageMode()" type="checkbox"> -->
-						  <span class="slider options"></span>
-						</label>
-						<label class="switch options options">
-						  <input class="checkbox-image options" onchange="ImageMode()" type="checkbox">
-						  <span class="slider options"></span>
-						</label>
-
-					<!-- drop-options-конец-->
+					    <!-- Элементы для страницы 0 -->
+					<div class="button-group button-page-0">
+					    <button class="drop-options-button options" onclick="DropOptions()">
+					        <i class="fa-solid fa-gear options"></i>
+					    </button>
+					    <div class="drop-options options">
+					        <label class="switch options">
+					            <input class="checkbox-reverse options" onchange="ReversMode()" type="checkbox">
+					            <span class="slider options"></span>
+					        </label>
+					        <label class="switch options">
+					            <input class="checkbox-image options" onchange="ImageMode()" type="checkbox">
+					            <span class="slider options"></span>
+					        </label>
+					    </div>
+					    <button class="show mm-button mm-button-left" onclick="Show()">Перевод</button>
+					    <button class="mm-button mm-button-right" onclick="GenerationAlgorithm()">Генерировать</button>
 					</div>
-					<!-- drop-options-конец-->
+
+					<!-- Элементы для страницы 1 -->
+					<div class="button-group button-page-1">
+					    <button class="mm-button mm-button-right" onclick="Grithm()">Генерировать123</button>
+					</div>
+
+					<!-- Элементы для страницы 2 -->
+					<div class="button-group button-page-2">
+					    <button class="show mm-button mm-button-left" onclick="GenerationImages()">КАРТИНКИ</button>
+					</div>
+
+
+					<!-- Элементы для страницы 11 -->
+					<div class="button-group button-page-11">
+					    <button class="mm-button mm-button-right" onclick="Grithm()">Генери432ровать</button>
+					    <button class="mm-button mm-button-right" onclick="Grithm()">Генери432роват3212ь</button>
+					</div>
 
 
 
-
-					<button class="show mm-button mm-button-left" onclick="Show()">Перевод</button>
-					<button class="mm-button mm-button-right" onclick="GenerationAlgorithm()">Генерировать</button>
-					
 				</div>
 
-				<!--МЕНЮ-КОНЕЦ-->
+
+
 
 				<!--СТРАНИЦЫ-НАЧАЛО-->
 				<div class="pages">
@@ -124,7 +140,15 @@
 					</div>
 					<!--страница, куда выводяться все слова из массива слов-конец-->
 					
-					<div class="page">2</div>
+					<!--страница с картинками-->
+					<div class="page" style="display: block;">
+					    <div class="generate-content-images">
+					        <div class="images row"></div>
+					        <div class="options row"></div>
+					    </div>
+					</div>
+					<!--страница с картинками-->
+
 					<div class="page">3</div>
 					<div class="page">4</div>
 					<!--#выборстраницы-->
@@ -289,6 +313,37 @@ max-width: 500px;
     min-width: 100%;
 }
 
+/*Это из блок с генерацией картинок, отвечает за все кнопки с случайными словами*/
+.option-button {
+    background-color: blue; /* Задаем фон кнопкам */
+    color: white; /* Задаем цвет текста на кнопках */
+    font-family: 'Oswald', sans-serif; /* Задаем шрифт */
+    font-size: 30px; /* Задаем размер шрифта */
+    width: 100%; /* Ширина кнопок с учетом промежутка */
+    padding: 15px; /* Задаем отступы для кнопок */
+    border-radius: 110px; /* Скругляем углы */
+    height: 100px; /* Фиксированная высота для кнопок */
+    margin: 5px; /* Добавляем внешний отступ между кнопками */
+    border: none; /* Убираем стандартную обводку */
+    box-sizing: border-box; /* Учитываем отступы в расчетах */
+    display: inline-block; /* Используем inline-block, чтобы кнопки шли в ряд */
+}
+
+.option-button:hover {
+    background-color: darkblue; /* Изменяем цвет фона при наведении */
+}
+
+/* Стили для правильного и неправильного ответа */
+.option-button.correct {
+    background-color: green; /* Задаем зеленый цвет для правильного ответа */
+}
+
+.option-button.incorrect {
+    background-color: red; /* Задаем красный цвет для неправильного ответа */
+}
+
+
+
 
 /*Нижнее меню и кнопки снизу*/
 .main-menu{
@@ -319,7 +374,9 @@ max-width: 500px;
     color: white;
 	background: blue;
 }
-
+.button-group {
+    display: contents;
+}
 
 
 
@@ -517,14 +574,20 @@ body{
 //хз, ибо без нее - система выдает ошибку
 //так же эта штука выполняет роль лаунчера и подгружает функции
 //при загрузке страницы
+let defaultPage = 2;
+
 window.onload = function(){
-	document.querySelectorAll('.page')[0].style = 'display:block' //default page
+
+	document.querySelectorAll('.page')[defaultPage].style = 'display:block' //default page
 	WriteAllWords() //сразу при загрузке выгружаем на страницу все слова/дни
 	LoadDefaultId() //загружаем defaultId, если таковой имееться в локальном хранилище
+
+	ChangePage(defaultPage) //// При загрузке страницы сразу запускаем функцию с параметром defaultPage для того, чтобы загрузить кнопки НУЖНО СТРАНИЦЫ
 
     ImageModeLoad() //загружаем режим картинок, должно идти первее GenerationAlgorithm()
     ReversModeLoad() //загружаем реверс значение, должно идти первее GenerationAlgorithm()
 	GenerationAlgorithm() //загружаем алгоритм генерации слов при загрузке
+	GenerationImages() //загружаем алгоритм генерации картинок при загрузке
   
 }
 
@@ -541,19 +604,36 @@ window.onload = function(){
 // просто перекопировать DIV.
 // теги: #выборстраницы
 function ChangePage(PageNumber) {
+    // Старый код для переключения страниц
+    i = 0;
+    Pages = document.querySelectorAll('.page'); // получаем все страницы
+    PageCounter = Pages.length;
 
-	i = 0;
-	Pages = document.querySelectorAll('.page'); //берем все страницы, которые в DIV pages
-	PageCounter = Pages.length; //берем длинну всех страниц
+    // Скрываем все страницы
+    while (i < PageCounter) {
+        Pages[i].style = 'display: none;';
+        i++;
+    }
+    // Показываем нужную страницу
+    Pages[PageNumber].style = 'display: block;';
 
-	//всем, без исключений страницам присваивается display: none, а потом, после цикла отображаем ту страницу, которую мы получили в функцию (PageNumber)
-	while(i < PageCounter){
-		Pages[i].style = 'display: none;'
-		i++;
-	}
-	Pages[PageNumber].style = 'display: block;'
+    // Новый код для управления кнопками
+    let buttonGroups = document.querySelectorAll('.button-group');
+    
+    // Скрыть все группы кнопок
+    buttonGroups.forEach(function(group) {
+        group.style.display = 'none'; // использую display, а не style
+    });
+
+    // Показать только группу кнопок для текущей страницы
+    let currentGroup = document.querySelector('.button-page-' + PageNumber);
+    if (currentGroup) {
+        currentGroup.style.display = 'contents';
+    }
 
 }
+
+
 
 
 
@@ -916,6 +996,14 @@ function GetWords() {
 //несколько раз подряд
 let PastNumber;
 
+
+// Функция для генерации случайных чисел
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+
+
 function GenerationAlgorithm(){
 
 	//получаем значения, куда всё будем выводить
@@ -999,6 +1087,125 @@ function GenerationAlgorithm(){
 	ContentPage.querySelector('.examples').insertAdjacentHTML('afterbegin', ExampleContent );
 
 }
+
+
+
+
+
+
+
+
+
+
+let attempts = 0;
+let maxAttempts = 2; // Количество попыток, которые можно редактировать
+let optionsCount = 4; // Количество вариантов ответов, можно менять
+let randomWords = [];
+
+// Функция для генерации случайных чисел
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function GenerationImages() {
+    // Ищем элемент с классом generate-content-images
+    let contentPage = document.querySelector('.generate-content-images');
+
+    if (!contentPage) {
+        console.error('Контейнер с классом .generate-content-images не найден.');
+        return;
+    }
+
+    // Очищаем содержимое блока с картинками и вариантами
+    let imagesContainer = contentPage.querySelector('.images');
+    let optionsContainer = contentPage.querySelector('.options');
+    
+    imagesContainer.innerHTML = '';
+    optionsContainer.innerHTML = '';
+    attempts = 0;
+
+    // Фильтруем слова, у которых есть картинки
+    let filteredWords = Words[defaultId].filter(word => word.image.length > 0);
+
+    // Генерируем одно случайное слово с картинкой
+    let randomWord = filteredWords[getRandomInt(filteredWords.length)];
+
+    // Выводим одну картинку на страницу
+    let imgElement = `<div class="col-md-12 text-center">
+                        <div class="image-container">
+                            <img class="generate-image" src="${randomWord.image[0].image_path}" alt="${randomWord.english}">
+                        </div>
+                      </div>`;
+    imagesContainer.insertAdjacentHTML('beforeend', imgElement);
+
+    // Генерируем варианты ответа, среди которых одно правильное
+    randomWords = [];
+    randomWords.push(randomWord);
+
+    // Добавляем дополнительные случайные слова для вариантов, если они ещё не в списке
+    while (randomWords.length < optionsCount) {
+        let randomIndex = getRandomInt(filteredWords.length);
+        if (!randomWords.includes(filteredWords[randomIndex])) {
+            randomWords.push(filteredWords[randomIndex]);
+        }
+    }
+
+    // Перемешиваем варианты ответов
+    randomWords = shuffleArray(randomWords);
+
+    // Выводим варианты ответа
+    randomWords.forEach(option => {
+        let optionElement = `<div class="col-md-6 text-center">
+                                <button class="option-button btn btn-primary" onclick="checkAnswer('${option.english}', '${randomWord.english}', this)">
+                                    ${option.english}
+                                </button>
+                             </div>`;
+        optionsContainer.insertAdjacentHTML('beforeend', optionElement);
+    });
+}
+
+// Функция перемешивания массива
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Функция для проверки правильности ответа
+function checkAnswer(selectedWord, correctWord, buttonElement) {
+    if (selectedWord === correctWord) {
+        // Если правильный ответ, окрашиваем кнопку в зеленый
+        buttonElement.classList.add('correct');
+        buttonElement.classList.remove('incorrect');
+    } else {
+        // Если неправильный ответ, окрашиваем кнопку в красный
+        buttonElement.classList.add('incorrect');
+        buttonElement.classList.remove('correct');
+
+        // Увеличиваем количество попыток
+        attempts++;
+        if (attempts >= maxAttempts) {
+            alert('Вы исчерпали количество попыток, генерируем заново...');
+            GenerationImages();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //по умолчанию .show-content - скрыт, при вызове GenerationAlgorithm() он тоже каждый раз скрывается
